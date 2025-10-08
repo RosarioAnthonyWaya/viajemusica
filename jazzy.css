@@ -5,7 +5,7 @@ html {
 }
 
 
-@@font-face {
+@font-face {
   font-family: 'gt_super_ds_trialbd';
   src: url('https://rosarioanthonywaya.github.io/Viaje/Assets/webfontkit-20250119-205452/gt-super-display-bold-trial-webfont.woff2') format('woff2'),
        url('https://rosarioanthonywaya.github.io/Viaje/Assets/webfontkit-20250119-205452/gt-super-display-bold-trial-webfont.woff') format('woff');
@@ -4355,8 +4355,8 @@ figure {
 
   .padding-header {
     padding-left: 2.5rem;
-    padding-right: 27.5rem;
-    padding-bottom: 14rem;
+    padding-right: 41.5rem;
+    padding-bottom: 6rem;
     }
   
 .main-heading {
@@ -4883,7 +4883,7 @@ figure {
 .brand {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
-  background-color: var(--color--midnight-slate);
+  background-color: color-mix(in srgb, var(--color--midnight-slate) 0%, transparent);
   justify-content: flex-start;
   align-items: center;
   height: 100%;
@@ -6606,7 +6606,7 @@ object-fit: none;
   letter-spacing: 5vw;
   font-size: 9vw;
   font-weight: 700;
-  line-height: 0.5;
+  line-height: 0.8;
   font-family: 'gt_super_ds_trialsu', serif; /* Super */
   letter-spacing: -6px;
   Color: #ffffff;
@@ -6636,6 +6636,7 @@ object-fit: none;
 
 .text-block {
   font-size: 1.5vw;
+  line-height: 2.0vw;
 }
 
 .marquee-works {
@@ -8096,7 +8097,7 @@ object-fit: none;
   }
 
   .nav-menu-wrap {
-    background-color: var(--color--soft-pearl);
+    background-color: #fdfdfd;
     justify-content: center;
     align-items: center;
   }
@@ -8104,7 +8105,7 @@ object-fit: none;
   .nav-menu {
     grid-column-gap: .5rem;
     grid-row-gap: .5rem;
-    background-color: var(--color--soft-pearl);
+    background-color: #6a0620;
     color: var(--color--midnight-slate);
     justify-content: center;
     align-items: center;
@@ -8456,6 +8457,7 @@ object-fit: none;
 
   .text-block {
     font-size: 1.125rem;
+    line-height: 1;
   }
 
   .cube {
@@ -9147,7 +9149,7 @@ object-fit: none;
 
   .hero-title-wrapper {
     justify-content: flex-start;
-    align-items: center;
+    align-items: left;
   }
 
   .hero-title-size {
@@ -9501,17 +9503,18 @@ object-fit: none;
   }
 
   .padding-header {
+    padding-top: 0rem;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-bottom: 10rem;
+    padding-bottom: 3rem;
   }
 
   .heading-text-size {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   .heading-text-size.small-mobile {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 
   .marquee-heading-component {
@@ -9925,6 +9928,7 @@ object-fit: none;
   .elipse-hero-button {
     width: 6rem;
     height: 6rem;
+   
   }
 
   .cube-back {
@@ -10357,3 +10361,13 @@ footer {
         height: 35px;
     }
 }
+
+/* Use SVG for the menu icon instead of the Webflow icon font */
+.menu-icon svg { 
+  width: 24px; 
+  height: 24px; 
+  display: block;
+color: #6a0620; }
+
+/* Safety: if any element still has w-icon-nav-menu, kill its pseudo glyph */
+.w-icon-nav-menu::before { content: none !important; }
