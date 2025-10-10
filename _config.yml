@@ -1,0 +1,6 @@
+title: Viaje Música
+url: https://<your-username>.github.io
+baseurl: "" # if publishing at root; otherwise "/viaje-musica"
+theme: null
+plugins:
+  - jekyll-seo-tag
