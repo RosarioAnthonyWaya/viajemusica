@@ -10380,3 +10380,43 @@ color: #6a0620; }
 
 /* Safety: if any element still has w-icon-nav-menu, kill its pseudo glyph */
 .w-icon-nav-menu::before { content: none !important; }
+
+
+/* Stop iOS font auto-boost (which makes logos/menus look larger) */
+html { -webkit-text-size-adjust: 100%; }
+
+/* General sanity */
+* { box-sizing: border-box; }
+img, svg { max-width: 100%; height: auto; }
+
+/* Lock the header layout */
+.site-header, .w-nav {           /* use your header wrapper class */
+  display: flex;
+  align-items: center;           /* prevents vertical stretch */
+  justify-content: space-between;
+  padding: 10px 16px;
+  min-height: 56px;
+}
+
+/* Logo: size by HEIGHT, never vw */
+.site-logo, .w-nav-brand img, .w-nav-brand svg {
+  display: block;
+  height: clamp(28px, 6vh, 36px);
+  width: auto;                   /* avoids horizontal stretch */
+}
+
+/* Hamburger button */
+.menu-toggle, .w-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(36px, 8vh, 44px);
+  height: clamp(36px, 8vh, 44px);
+  flex: 0 0 auto;                /* don't let flex grow it */
+  border-radius: 9999px;
+}
+.menu-toggle svg, .w-nav-button svg { width: 60%; height: 60%; }
+
+/* Kill iOS 100vw overflow that causes edge artifacts */
+body { overflow-x: hidden; }
+.section, .container, .hero { width: 100%; max-width: 100%; }
