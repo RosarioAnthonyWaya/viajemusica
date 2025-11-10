@@ -10405,3 +10405,36 @@ color: #6a0620; }
     padding-bottom: 120%; /* slightly taller for mobile */
   }
 }
+
+/* --- iPhone logo & hamburger stretch fixes --- */
+.navbar-component { align-items: center; }  /* keep row items centered */
+
+.brand { height: auto !important; }         /* stop the brand from filling container height */
+.brand.w--current { align-self: center !important; } /* cancel the stretch rule */
+.nav-menu-wrap { align-self: center !important; }    /* cancel the stretch rule */
+
+/* lock the actual icon and logo sizes on small screens */
+@media (max-width: 480px) {
+  .logo-img {
+    max-height: 40px;     /* hard cap for iPhone */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .w-nav-button { 
+    padding: 8px 10px;    /* smaller tap target padding to avoid vertical growth */
+    line-height: 1; 
+    align-self: center;
+  }
+  .menu-icon,
+  .menu-icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+}
+
+/* make sure legacy Webflow icon won’t expand */
+.w-icon-nav-menu::before { content: none !important; }
+
