@@ -107,6 +107,15 @@ h1 {
   font-size: 2em;
 }
 
+h8 {
+ font-weight: 200;
+  font-family: var(--font--satoshi);
+  font-size: 0.5em;
+  margin: .5em 0;
+  letter-spacing: -3px;
+  font-weight: 100;
+}
+
 mark {
   color: #000;
   background: #ff0;
@@ -401,7 +410,7 @@ pre.w-code-block code {
 }
 
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, h8 {
   margin-bottom: 10px;
   font-weight: bold;
 }
@@ -3249,7 +3258,7 @@ body {
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6,  p {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -4305,7 +4314,7 @@ figure {
 
 .text-size-xdisplay.line-height-122 {
   line-height: 1.22;
-  font-size: 50px;
+  font-size: 35px;
 }
 
 .text-size-xdisplay.line-height-122.about-style {
@@ -7957,7 +7966,7 @@ object-fit: none;
   }
 
   .text-size-xdisplay.line-height-122.about-style, .text-size-xdisplay.line-height-122.show-mobile {
-    font-size: 4.5vw;
+    font-size: 4vw;
     line-height: 1.32;
   }
 
@@ -8777,7 +8786,7 @@ object-fit: none;
     vertical-align: baseline;
     margin-left: .5vw;
     margin-right: .5vw;
-    font-size: 2rem;
+    font-size: 1.8rem;
     display: inline;
   }
 
@@ -9493,7 +9502,7 @@ object-fit: none;
   }
 
   .text-size-xdisplay.line-height-122 {
-    font-size: 1.7rem;
+    font-size: 1rem;
   }
 
   .padding-global {
@@ -10371,3 +10380,28 @@ color: #6a0620; }
 
 /* Safety: if any element still has w-icon-nav-menu, kill its pseudo glyph */
 .w-icon-nav-menu::before { content: none !important; }
+
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 0%; /* 16:9 ratio */
+  overflow: hidden;
+  border-radius: 8px; /* optional: matches your card’s border style */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Make it smaller or adjust layout for mobile */
+@media (max-width: 767px) {
+  .video-wrapper {
+    padding-bottom: 120%; /* slightly taller for mobile */
+  }
+}
