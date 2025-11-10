@@ -10385,7 +10385,7 @@ color: #6a0620; }
 .video-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 0%; /* 16:9 ratio */
+  padding-bottom: 100%; /* 16:9 ratio */
   overflow: hidden;
   border-radius: 8px; /* optional: matches your card’s border style */
 }
